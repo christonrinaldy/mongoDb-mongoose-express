@@ -1,7 +1,7 @@
 const userRoute = require('express').Router()
 const mongoose = require('mongoose')
 
-const User = require('../api/models/user')
+const User = require('../api/model/user')
 userRoute.post('/user', (req,res) => {
     
     User.create({_id: new mongoose.Types.ObjectId(), name: req.body.name})
